@@ -1,0 +1,28 @@
+<div class="card user-card" *ngFor="let user of users$ | async">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12">
+                    <h5 class="card-title"><i class="fas fa-user-circle"></i> {{user.name}}</h5>
+            </div>
+        </div>
+
+        <div class="row mt-1">
+            <div class="col-4">
+                <strong>Email: </strong> {{user.email}}
+            </div>
+            <div class="col-4">
+                <strong>Phone: </strong> {{user.phone}}
+            </div>
+            <div class="col-4">
+                <strong>Company: </strong> {{user.company.name}}
+            </div>
+        </div>
+
+        <div class="row mt-1">
+            <div class="col-12">
+                <strong>Address: </strong>  {{user.address.suite}}{{user.address.street}}, {{user.address.city}} {{user.address.zipcode}}
+            </div>
+        </div>
+        
+    </div>
+</div>
